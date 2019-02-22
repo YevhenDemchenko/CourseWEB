@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Дополнительное задание 1</title>
+	<header>
+		<h1 align="center">Красивая форма</h1>
+	</header>
+	<style>
+		* {box-sizing: border-box;}
+		body {background: #f69a73;}
+		.form {
+			position: relative;
+			max-width: 400px;
+			margin: 50px auto 0;
+			background: white;
+			border-radius: 30px;
+		}
+		.figure-left {
+		    bottom: 60px;
+		    left: -30px;
+		    content: "";
+		    position: absolute;
+		    width: 50px;
+		    height: 20px;
+		    background: #f69a73;
+		    border-radius: 20px;
+		}
+		.figure-right {
+		    top: 60px;
+		    right: -30px;
+		    content: "";
+		    position: absolute;
+		    width: 50px;
+		    height: 20px;
+		    background: #f69a73;
+		    border-radius: 20px;
+		}
+		.figure-left:before,
+		.figure-right:before,
+		.figure-left:after,
+		.figure-right:after {
+		    content: "";
+		    position: absolute;
+		    width: 50px;
+		    height: 20px;
+		    border-radius: 30px;
+		    background: white;
+		}
+		.figure-left:before {top: -20px;}
+		.figure-left:after {
+		    top: 20px;
+		    left: 10px;
+		}
+		.figure-right:before {
+		    top: -20px;
+		    right: 0;
+		}
+		.figure-right:after {
+		    top: 20px;
+		    right: 10px;
+		}
+		.circle {
+		    position: absolute;
+		    bottom: 80px;
+		    left: -55px;
+		    width: 20px;
+		    height: 20px;
+		    border-radius: 50%;
+		    background: white;
+		}
+		.form-inner {padding: 50px;}
+		.form-inner input,
+		.form-inner textarea {
+		    display: block;
+		    width: 100%;
+		    padding: 0 20px;
+		    margin-bottom: 10px;
+		    background: #E9EFF6;
+		    line-height: 40px;
+		    border-width: 0;
+		    border-radius: 20px;
+		    
+		}
+		.form-inner input[type="submit"] {
+		    margin-top: 30px;
+		    background: #f69a73;
+		    color: white;
+		    font-size: 14px;
+		}
+		.form-inner textarea {resize: none;}
+		span {
+			margin: 5px;
+			position: center;
+		}
+	</style>
+</head>
+<body>	
+		<form class = "form" name = "form" onsubmit='return validate()'>
+		    <div class="figure-left"></div>
+		    <div class="figure-right"></div>
+		    <div class="circle"></div>
+		    <div class="form-inner">
+		   		<h2 style="margin-top: 0;">Написать нам</h2>    
+            	<input type="text" name = "Username" placeholder = "Username">
+            	<span style="color:red" id="Usernamef"></span><br />        
+            	<input type="text" name = "Email" placeholder="Email">
+            	<span style="color:red" id="Emailf"></span><br />       
+            	<textarea name = "Сообщение..." placeholder="Сообщение..." rows="5"></textarea>
+            	<span style="color:red" id="Сообщение...f"></span><br />
+            	<input type="submit" value="Отправить">
+         	</div>
+	  	</form>
+<script type="text/javascript">
+
+	function validate(){
+	    var x=document.forms["form"]["Username"].value;
+	    var y=document.forms["form"]["Email"].value;
+	    var z=document.forms["form"]["Сообщение..."].value;
+	    if (x.length == 0){
+	        document.getElementById("Usernamef").innerHTML="*поле не может быть пустым";
+	        return false;
+	    }
+	    if (y.length == 0){
+	        document.getElementById("Emailf").innerHTML="*поле не может быть пустым";
+	        return false;
+	    }
+	    if (z.length == 0){
+	      document.getElementById("Сообщение...f").innerHTML="*поле не может быть пустым";
+	      return false;
+	    }
+	}
+	  	</script>
+</body>
+</html>
