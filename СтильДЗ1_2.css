@@ -1,0 +1,42 @@
+.fig {
+		text-align: center; 
+		font-style: italic; 
+		margin-bottom: 5px; 
+		}
+.leftimg {
+		float:left; 
+		margin: 15px 20px 20px 0; 
+}
+.rightimg  {
+		float: right; 
+		margin: 20px 0 20px 15px;
+}
+.text {
+		text-align: justify; 
+		text-indent: 20px; 
+		margin: 30px;
+}
+.footer {
+   background-repeat: repeat-x;
+   width: 100%;
+   border-top: 1px solid #d0d3d8;
+   padding: 0.5em 0;
+   clear: both;
+}
+.layer {
+    overflow: auto; 
+    width: 600px;
+    height: 250px;
+    padding: 10px;
+    border: solid 2px;
+    margin: auto;
+    border-style: solid; 
+    border-color: #0000FF
+} 
+.div1 {background-color: #48D1CC;}
+.div2 {background-color: #00FA9A;}
+.div3 {background-color: #FF7F50;}
+body {
+		background: #ADD8E6; 
+		margin: 0px;
+}
