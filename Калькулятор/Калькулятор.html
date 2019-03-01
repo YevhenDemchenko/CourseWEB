@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src = "./Калькулятор.js"></script>
+</head>
+<body>
+	<center>
+		<p>Введите первое число</p>
+		<input type="text" id = "numb1" onkeyup="validate(this)"	>
+		<p>Введите второе число</p>
+		<input type="text" id = "numb2" onkeyup="validate(this)"	>
+		<p>Введите операцию</p>
+		<input type="text" id = "op">
+		<p><button onclick="getResult()" >Высчитать</button></p>
+		<p>Результат:</p>
+		<br>
+		<p id = "res"></p>
+	</center>
+</body>
+</html>
